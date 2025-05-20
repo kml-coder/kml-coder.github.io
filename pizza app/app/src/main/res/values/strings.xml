@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">softmeth-project-5</string>
+    <string name="preview_textview">Preview:</string>
+    <string name="types_textview">Select a type:</string>
+    <string name="styles_textview">Select a style:</string>
+    <string name="sizes_textview">Select a size:</string>
+    <string name="toppings_textview">Select your toppings (Up to 7):</string>
+    <string name="addPizza_textview">Add Pizza</string>
+    <string name="viewOrder_textview">Review Order</string>
+    <string name="orderSummary_textview">Order Summary</string>
+    <string name="orderPage_textview">Order your Pizzas</string>
+    <string name="subtotal_text">Subtotal: $%1$.2f</string>
+    <string name="total_text">Total (incl. tax): $%1$.2f</string>
+    <string-array name="pizza_styles">
+        <item>Chicago</item>
+        <item>NYC</item>
+    </string-array>
+    <string-array name="pizza_types">
+        <item>Deluxe</item>
+        <item>BBQ Chicken</item>
+        <item>Meatzza</item>
+        <item>Build Your Own</item>
+    </string-array>
+    <string-array name="sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    <string-array name="toppings">
+        <item>Sausage</item>
+        <item>Pepperoni</item>
+        <item>Green Pepper</item>
+        <item>Onion</item>
+        <item>Mushroom</item>
+        <item>BBQ Chicken</item>
+        <item>Provolone</item>
+        <item>Cheddar</item>
+        <item>Beef</item>
+        <item>Ham</item>
+        <item>Pineapple</item>
+        <item>Jalapeno</item>
+        <item>Chicken</item>
+    </string-array>
+</resources>

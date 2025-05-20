@@ -1,0 +1,377 @@
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': '40 deg 45\' 30.23" N', 'longitude': '74 deg 58\' 30.63" W'}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': '40 deg 45\' 30.23" N', 'longitude': '74 deg 58\' 30.63" W'}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': 40.75839722222222, 'longitude': -74.97517500000001}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': 40.75839722222222, 'longitude': -74.97517500000001}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': 40.75839722222222, 'longitude': -74.97517500000001}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': 40.75839722222222, 'longitude': -74.97517500000001}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': 40.75839722222222, 'longitude': -74.97517500000001}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': 40.75839722222222, 'longitude': -74.97517500000001}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- pancakes: 99.99%
+- waffles: 0.00%
+- huevos_rancheros: 0.00%
+- omelette: 0.00%
+- french_toast: 0.00%
+
+📅 Timestamp: 2025:03:23 12:19:32
+📍 Location: {'latitude': 40.75839722222222, 'longitude': -74.97517500000001}
+📷 Device: iPhone 13 Pro
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- macaroni_and_cheese: 54.98%
+- lasagna: 34.19%
+- french_onion_soup: 4.56%
+- apple_pie: 2.21%
+- garlic_bread: 0.73%
+
+📅 Timestamp: 2025:02:20 15:14:51
+📍 Location: None
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- cheese_plate: 29.42%
+- garlic_bread: 24.64%
+- bruschetta: 11.66%
+- cannoli: 8.36%
+- apple_pie: 5.21%
+
+📅 Timestamp: 2025:03:06 18:24:00
+📍 Location: {'latitude': 40.500391666666665, 'longitude': -74.45697777777778}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- pork_chop: 61.58%
+- peking_duck: 14.50%
+- foie_gras: 7.59%
+- chicken_wings: 5.11%
+- beignets: 1.60%
+
+📅 Timestamp: None
+📍 Location: None
+📷 Device: None
+
+========================================
+
+🍽 Prediction Results:
+- pizza: 99.80%
+- bruschetta: 0.07%
+- garlic_bread: 0.03%
+- beef_carpaccio: 0.01%
+- greek_salad: 0.01%
+
+📅 Timestamp: None
+📍 Location: None
+📷 Device: None
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- tacos: 99.98%
+- chicken_quesadilla: 0.01%
+- huevos_rancheros: 0.00%
+- falafel: 0.00%
+- breakfast_burrito: 0.00%
+
+📅 Timestamp: 2025:03:21 18:57:14
+📍 Location: {'latitude': 32.979847222222226, 'longitude': -117.24954166666667}
+📷 Device: iPhone 11 Pro Max
+
+========================================
+
+🍽 Prediction Results:
+- pizza: 99.80%
+- bruschetta: 0.07%
+- garlic_bread: 0.03%
+- beef_carpaccio: 0.01%
+- greek_salad: 0.01%
+
+📅 Timestamp: None
+📍 Location: None
+📷 Device: None
+
+========================================
+
