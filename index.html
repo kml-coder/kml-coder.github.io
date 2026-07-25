@@ -83,7 +83,8 @@
 
   .card h2 { font-size: 0.9375rem; font-weight: 700; margin: 0 0 0.6rem; }
   .card h2 a { color: var(--fg); text-decoration: none; }
-  .card h2 a:hover { text-decoration: underline; }
+  /* hover 표시는 카드 배경색 하나로만. 밑줄 쓰면 설명 문단 위에서도
+     제목에 밑줄이 그어짐 (::after 오버레이가 제목 링크의 일부라서). */
 
   /* 카드 전체를 클릭 영역으로. 제목 링크를 카드 전면에 펼침 (JS 없음). */
   .card h2 a::after {
@@ -114,7 +115,7 @@
 
   <p>Machine learning engineer. Master's in CS at Georgia Tech.</p>
 
-  <p>I work on the software side of AI. Most of the projects below started<br>
+  <p>I work on the software side of AI. Most of these projects started<br>
      because I wanted the thing to exist and it didn't.</p>
 
   <nav class="links">
@@ -131,7 +132,6 @@
       <p>Turns a recipe into a pie chart of what it's actually made of.</p>
       <div class="foot">
         <span class="tech">python · pytorch · react native</span>
-        <a href="https://kl946-food-chart.hf.space/app/">demo</a>
         <a href="https://github.com/kml-coder/food_chart_public">code</a>
       </div>
     </article>
