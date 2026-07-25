@@ -19,9 +19,10 @@
     --fg: #000000;
     --bg: #ffffff;
     --line: #000000;
+    --hover: #f5f5f5;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --fg: #ededed; --bg: #121212; --line: #ededed; }
+    :root { --fg: #ededed; --bg: #121212; --line: #ededed; --hover: #1c1c1c; }
   }
 
   * { box-sizing: border-box; }
@@ -51,6 +52,12 @@
   .links span { opacity: 0.35; padding: 0 0.55rem; }
   .links a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
 
+  .section {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0 0 1.1rem;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -59,6 +66,7 @@
   @media (max-width: 46rem) { .grid { grid-template-columns: 1fr; } }
 
   .card {
+    position: relative;
     border: 1px solid var(--line);
     padding: 1.1rem 1.2rem 1.2rem;
     display: flex;
@@ -73,15 +81,17 @@
     border-bottom: 1px solid var(--line);
   }
 
-  .num {
-    font-size: 0.8125rem;
-    opacity: 0.45;
-    margin-bottom: 0.3rem;
-  }
-
   .card h2 { font-size: 0.9375rem; font-weight: 700; margin: 0 0 0.6rem; }
   .card h2 a { color: var(--fg); text-decoration: none; }
   .card h2 a:hover { text-decoration: underline; }
+
+  /* 카드 전체를 클릭 영역으로. 제목 링크를 카드 전면에 펼침 (JS 없음). */
+  .card h2 a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  .card:hover { background: var(--hover); }
 
   .card p { margin: 0 0 1.2rem; font-size: 0.875rem; line-height: 1.7; }
 
@@ -94,7 +104,7 @@
     font-size: 0.75rem;
   }
   .foot .tech { margin-right: auto; opacity: 0.65; }
-  .foot a { color: var(--fg); }
+  .foot a { color: var(--fg); position: relative; z-index: 1; }
 </style>
 </head>
 <body>
@@ -102,21 +112,23 @@
 
   <h1>Kyungmin Lee</h1>
 
-  <p>Machine learning engineer at Rep AI, mostly computer vision.<br>
+  <p>I build software with AI in it &mdash; and train the model myself when<br>
+     the off-the-shelf one doesn't fit.<br>
      Master's in CS at Georgia Tech.</p>
 
   <p>I build small tools that solve a problem I actually ran into.<br>
      Most of them started because I wanted the thing to exist and it didn't.</p>
 
   <nav class="links">
-    <a href="https://github.com/kml-coder">github</a><span>/</span><a href="www.linkedin.com/in/kyungmin-lee-coder">linkedin</a><span>/</span><a href="resume.pdf">résumé</a><span>/</span><a href="mailto:kl946@scarletmail.rutgers.edu">email</a>
+    <a href="https://github.com/kml-coder">github</a><span>/</span><a href="https://www.linkedin.com/in/kyungmin-lee-coder">linkedin</a><span>/</span><a href="resume.pdf">résumé</a><span>/</span><a href="mailto:kl946@scarletmail.rutgers.edu">email</a>
   </nav>
+
+  <h2 class="section">Projects</h2>
 
   <div class="grid">
 
     <article class="card">
       <!-- <img src="assets/food-chart.png" alt="Pie chart of a recipe's ingredient proportions"> -->
-      <div class="num">01</div>
       <h2><a href="https://github.com/kml-coder/food_chart_public">Food Chart</a></h2>
       <p>Turns a recipe into a pie chart of what it's actually made of.</p>
       <div class="foot">
@@ -127,7 +139,6 @@
 
     <article class="card">
       <!-- <img src="assets/outfit-finder.gif" alt="Outfit photo turned into a ranked product list"> -->
-      <div class="num">02</div>
       <h2><a href="https://github.com/kml-coder/clothes_finder">Outfit Finder</a></h2>
       <p>Give it a photo of an outfit, it finds where to buy the clothes in it.</p>
       <div class="foot">
@@ -138,8 +149,7 @@
 
     <article class="card">
       <!-- <img src="assets/muscle-3d.png" alt="3D body model with worked muscles highlighted"> -->
-      <div class="num">03</div>
-      <h2><a href="https://muscle_finder.com">Muscle 3D</a></h2>
+      <h2><a href="http://musclefinder.com">Muscle 3D</a></h2>
       <p>A 3D body model that shows which muscles an exercise actually works.</p>
       <div class="foot">
         <span class="tech">next.js · three.js · supabase</span>
@@ -149,7 +159,6 @@
 
     <article class="card">
       <!-- <img src="assets/posture-coach.gif" alt="Live skeleton overlay tracking posture"> -->
-      <div class="num">04</div>
       <h2><a href="https://github.com/kml-coder/good_pose">Posture Coach</a></h2>
       <p>Watches you through the camera and tells you when your posture slips.</p>
       <div class="foot">
