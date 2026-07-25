@@ -94,7 +94,15 @@
   }
   .card:hover { background: var(--hover); }
 
-  .card p { margin: 0 0 1.2rem; font-size: 0.875rem; line-height: 1.7; }
+  /* 설명 문단은 클릭 오버레이 위로 올림. 글자 위에선 클릭 안 되고
+     커서도 기본 화살표. 제목·여백은 여전히 카드 전체 클릭됨. */
+  .card p {
+    margin: 0 0 1.2rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
 
   .foot {
     margin-top: auto;
