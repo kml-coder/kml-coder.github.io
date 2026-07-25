@@ -8,3 +8,7 @@ preview.html
 index.html.backup-stub
 # 서브에이전트가 만든 케이스스터디 버전 - 보류
 site/
+
+# 작업 노트 - 로컬 전용
+NOTES.md
+old-site.html
