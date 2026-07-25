@@ -1,0 +1,10 @@
+.DS_Store
+# 검토용 시안 - 배포 안 함
+opt-a.html
+opt-b.html
+opt-c.html
+opt-ab.html
+preview.html
+index.html.backup-stub
+# 서브에이전트가 만든 케이스스터디 버전 - 보류
+site/

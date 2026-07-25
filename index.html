@@ -1,47 +1,155 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"/>
-        <title>My Portfolio</title>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7MW03F98QR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kyungmin Lee</title>
+<style>
+  :root {
+    --fg: #000000;
+    --bg: #ffffff;
+    --line: #000000;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #ededed; --bg: #121212; --line: #ededed; }
+  }
 
-  gtag('config', 'G-7MW03F98QR');
-</script>
-    </head>
-    <body>
-        <h1>Hello, I'm Kyungmin Lee!</h1>
-        <p>Welcome to my personal site.</p>
-        <p>
-            I graduated from the University of Rutgers-NewBrunswick, with a degree in Computer Science. <br>
-            I am currently looking for a full-time position in software engineering. <br>
-            I am interested in full-stack development and machine learning.  <br>
-        </p>
-        
-    </vr>
-    <div id="disqus_thread" style ="width: 80%; max-width: 600px; position:fixed; bottom: 0; left:0"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://kml-coder.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  * { box-sizing: border-box; }
 
-    </body>
+  body {
+    margin: 0;
+    padding: 3.5rem 2rem 5rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 15px/1.75 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main { max-width: 54rem; }
+
+  h1 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0 0 1.4rem;
+  }
+
+  p { margin: 0 0 1.4rem; max-width: 38rem; }
+
+  .links { margin: 0 0 3.5rem; font-size: 0.875rem; }
+  .links a { color: var(--fg); }
+  .links span { opacity: 0.35; padding: 0 0.55rem; }
+  .links a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+  @media (max-width: 46rem) { .grid { grid-template-columns: 1fr; } }
+
+  .card {
+    border: 1px solid var(--line);
+    padding: 1.1rem 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 스크린샷 넣을 자리. 주석 풀면 카드 상단에 꽉 참. */
+  .card img {
+    width: calc(100% + 2.4rem);
+    margin: -1.1rem -1.2rem 1rem;
+    display: block;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .num {
+    font-size: 0.8125rem;
+    opacity: 0.45;
+    margin-bottom: 0.3rem;
+  }
+
+  .card h2 { font-size: 0.9375rem; font-weight: 700; margin: 0 0 0.6rem; }
+  .card h2 a { color: var(--fg); text-decoration: none; }
+  .card h2 a:hover { text-decoration: underline; }
+
+  .card p { margin: 0 0 1.2rem; font-size: 0.875rem; line-height: 1.7; }
+
+  .foot {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    align-items: baseline;
+    font-size: 0.75rem;
+  }
+  .foot .tech { margin-right: auto; opacity: 0.65; }
+  .foot a { color: var(--fg); }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Kyungmin Lee</h1>
+
+  <p>Machine learning engineer at Rep AI, mostly computer vision.<br>
+     Master's in CS at Georgia Tech.</p>
+
+  <p>I build small tools that solve a problem I actually ran into.<br>
+     Most of them started because I wanted the thing to exist and it didn't.</p>
+
+  <nav class="links">
+    <a href="https://github.com/kml-coder">github</a><span>/</span><a href="www.linkedin.com/in/kyungmin-lee-coder">linkedin</a><span>/</span><a href="resume.pdf">résumé</a><span>/</span><a href="mailto:kl946@scarletmail.rutgers.edu">email</a>
+  </nav>
+
+  <div class="grid">
+
+    <article class="card">
+      <!-- <img src="assets/food-chart.png" alt="Pie chart of a recipe's ingredient proportions"> -->
+      <div class="num">01</div>
+      <h2><a href="https://github.com/kml-coder/food_chart_public">Food Chart</a></h2>
+      <p>Turns a recipe into a pie chart of what it's actually made of.</p>
+      <div class="foot">
+        <span class="tech">python · pytorch · react native</span>
+        <a href="https://github.com/kml-coder/food_chart_public">code</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- <img src="assets/outfit-finder.gif" alt="Outfit photo turned into a ranked product list"> -->
+      <div class="num">02</div>
+      <h2><a href="https://github.com/kml-coder/clothes_finder">Outfit Finder</a></h2>
+      <p>Give it a photo of an outfit, it finds where to buy the clothes in it.</p>
+      <div class="foot">
+        <span class="tech">python · flask · claude api</span>
+        <a href="https://github.com/kml-coder/clothes_finder">code</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- <img src="assets/muscle-3d.png" alt="3D body model with worked muscles highlighted"> -->
+      <div class="num">03</div>
+      <h2><a href="https://muscle_finder.com">Muscle 3D</a></h2>
+      <p>A 3D body model that shows which muscles an exercise actually works.</p>
+      <div class="foot">
+        <span class="tech">next.js · three.js · supabase</span>
+        <a href="https://github.com/kml-coder/muscle">code</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- <img src="assets/posture-coach.gif" alt="Live skeleton overlay tracking posture"> -->
+      <div class="num">04</div>
+      <h2><a href="https://github.com/kml-coder/good_pose">Posture Coach</a></h2>
+      <p>Watches you through the camera and tells you when your posture slips.</p>
+      <div class="foot">
+        <span class="tech">swift · apple vision · mediapipe</span>
+        <a href="https://github.com/kml-coder/good_pose">code</a>
+      </div>
+    </article>
+
+  </div>
+
+</main>
+</body>
 </html>
