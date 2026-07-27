@@ -12,3 +12,10 @@ site/
 # 작업 노트 - 로컬 전용
 NOTES.md
 old-site.html
+
+# 인터뷰 준비 노트 - 로컬 전용
+interview/
+
+# 코드 인덱스 - 로컬 전용
+.codegraph/
+graphify-out/
