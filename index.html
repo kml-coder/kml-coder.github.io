@@ -65,13 +65,42 @@
   }
   @media (max-width: 46rem) { .grid { grid-template-columns: 1fr; } }
 
+  /* 카드 = 뒤집히는 껍데기. 테두리·패딩은 앞/뒷면(.face)이 가짐. */
   .card {
     position: relative;
+    cursor: pointer;
+    /* perspective를 카드마다 두면 각 카드가 제 중심을 축으로 돎.
+       그리드에 한 번만 걸면 바깥쪽 카드가 비스듬히 찌그러짐. */
+    perspective: 1400px;
+  }
+  .card:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+
+  .face {
+    /* 끝에서 살짝 지나쳤다 제자리로 — 카드가 튕기며 놓이는 느낌.
+       제어점 y가 1을 넘는 게 오버슈트 구간. */
+    transition: transform 0.8s cubic-bezier(0.34, 1.28, 0.4, 1);
     border: 1px solid var(--line);
     padding: 1.1rem 1.2rem 1.2rem;
     display: flex;
     flex-direction: column;
+    background: var(--bg);
+    min-height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
+  .face-front { transform: rotateY(0deg); }
+  .face-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(-180deg);
+    overflow: auto;
+  }
+  .card.is-flipped .face-front { transform: rotateY(180deg); }
+  .card.is-flipped .face-back { transform: rotateY(0deg); }
+
+  /* 안 보이는 면은 클릭도 안 먹게. */
+  .card.is-flipped .face-front { pointer-events: none; }
+  .card:not(.is-flipped) .face-back { pointer-events: none; }
 
   /* 스크린샷 넣을 자리. 주석 풀면 카드 상단에 꽉 참. */
   .card img {
@@ -82,19 +111,22 @@
   }
 
   .card h2 { font-size: 0.9375rem; font-weight: 700; margin: 0 0 0.6rem; }
+  /* 카드 아무 데나 = 뒤집기. 제품 사이트로 가는 건 제목 링크 글자 위에서만.
+     그래서 예전 ::after{inset:0} 전체 클릭 오버레이는 안 씀 — 클릭을 다 먹음. */
   .card h2 a { color: var(--fg); text-decoration: none; }
-  /* hover 표시는 카드 배경색 하나로만. 밑줄 쓰면 설명 문단 위에서도
-     제목에 밑줄이 그어짐 (::after 오버레이가 제목 링크의 일부라서). */
-
-  /* 카드 전체를 클릭 영역으로. 제목 링크를 카드 전면에 펼침 (JS 없음). */
-  .card h2 a::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-  }
-  .card:hover { background: var(--hover); }
+  .card h2 a:hover { text-decoration: underline; }
+  .card:hover .face { background: var(--hover); }
 
   .card p { margin: 0 0 1.2rem; font-size: 0.875rem; line-height: 1.7; }
+  /* 카드 높이는 앞면 내용이 정함. 뒷면은 그 안에 들어가야 해서 조금 작게.
+     데스크톱 2열(카드 421px) 기준 뒷면 한도: 윗줄 카드 4줄, 아랫줄 카드 3줄
+     (≈ 30단어). 넘으면 뒷면에 스크롤바가 생김.
+     더 길게 쓰려면 .card { min-height: 14rem } — 대신 앞면도 같이 커짐. */
+  .face-back p {
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
 
   .foot {
     margin-top: auto;
@@ -106,6 +138,12 @@
   }
   .foot .tech { margin-right: auto; opacity: 0.65; }
   .foot a { color: var(--fg); position: relative; z-index: 1; }
+  .foot .hint { opacity: 0.65; }
+
+  /* 뒤집기 애니메이션은 취향 존중. 전환만 끄고 기능은 유지. */
+  @media (prefers-reduced-motion: reduce) {
+    .face { transition: none; }
+  }
 </style>
 </head>
 <body>
@@ -126,48 +164,121 @@
 
   <div class="grid">
 
-    <article class="card">
-      <!-- <img src="assets/muscle-3d.png" alt="3D body model with worked muscles highlighted"> -->
-      <h2><a href="http://musclefinder.com">Muscle 3D</a></h2>
-      <p>A 3D body model where you search an exercise and see which muscles it actually works.</p>
-      <div class="foot">
-        <span class="tech">next.js · three.js · supabase</span>
-        <a href="https://github.com/kml-coder/muscle">code</a>
+    <article class="card" role="button" tabindex="0" aria-expanded="false">
+      <div class="face face-front">
+        <!-- <img src="assets/muscle-3d.png" alt="3D body model with worked muscles highlighted"> -->
+        <h2><a href="http://musclefinder.com">Muscle 3D</a></h2>
+        <p>A 3D body model where you search an exercise and see which muscles it actually works.</p>
+        <div class="foot">
+          <span class="tech">next.js · three.js · supabase</span>
+          <a href="https://github.com/kml-coder/muscle">code</a>
+        </div>
+      </div>
+      <div class="face face-back" aria-hidden="true">
+        <p>I wanted to check which muscle an exercise actually hits while standing in a gym,
+           holding a phone. Every reference good enough to learn from was desktop-only.</p>
+        <div class="foot">
+          <span class="tech"></span>
+          <span class="hint">← back</span>
+        </div>
       </div>
     </article>
 
-    <article class="card">
-      <!-- <img src="assets/outfit-finder.gif" alt="Outfit photo turned into a ranked product list"> -->
-      <h2><a href="https://github.com/kml-coder/clothes_finder">Outfit Finder</a></h2>
-      <p>Give it a photo of an outfit — it reads the bad reviews, then ranks where to buy the clothes.</p>
-      <div class="foot">
-        <span class="tech">python · flask · claude</span>
-        <a href="https://github.com/kml-coder/clothes_finder">code</a>
+    <article class="card" role="button" tabindex="0" aria-expanded="false">
+      <div class="face face-front">
+        <!-- <img src="assets/outfit-finder.gif" alt="Outfit photo turned into a ranked product list"> -->
+        <h2><a href="https://github.com/kml-coder/clothes_finder">Outfit Finder</a></h2>
+        <p>Give it a photo of an outfit — it reads the bad reviews, then ranks where to buy the clothes.</p>
+        <div class="foot">
+          <span class="tech">python · flask · claude</span>
+          <a href="https://github.com/kml-coder/clothes_finder">code</a>
+        </div>
+      </div>
+      <div class="face face-back" aria-hidden="true">
+        <p>My first version read the bad reviews and answered well — in 653 seconds. Nobody
+           waits eleven minutes to buy a jacket, so the rest was getting that number down.</p>
+        <div class="foot">
+          <span class="tech"></span>
+          <span class="hint">← back</span>
+        </div>
       </div>
     </article>
 
-    <article class="card">
-      <!-- <img src="assets/posture-coach.gif" alt="Live skeleton overlay tracking posture"> -->
-      <h2><a href="https://postura-alpha.vercel.app">Posture Coach</a></h2>
-      <p>Watches your posture while you work and tells you exactly what to change.</p>
-      <div class="foot">
-        <span class="tech">swift · mediapipe · python</span>
-        <a href="https://github.com/kml-coder/good_pose">code</a>
+    <article class="card" role="button" tabindex="0" aria-expanded="false">
+      <div class="face face-front">
+        <!-- <img src="assets/posture-coach.gif" alt="Live skeleton overlay tracking posture"> -->
+        <h2><a href="https://postura-alpha.vercel.app">Posture Coach</a></h2>
+        <p>Watches your posture while you work and tells you exactly what to change.</p>
+        <div class="foot">
+          <span class="tech">swift · mediapipe · python</span>
+          <a href="https://github.com/kml-coder/good_pose">code</a>
+        </div>
+      </div>
+      <div class="face face-back" aria-hidden="true">
+        <p>I work hunched over and notice hours later. Feedback only helps while you are still
+           in the bad posture, which made this a latency problem before a modeling one.</p>
+        <div class="foot">
+          <span class="tech"></span>
+          <span class="hint">← back</span>
+        </div>
       </div>
     </article>
 
-    <article class="card">
-      <!-- <img src="assets/food-chart.png" alt="Pie chart of a recipe's ingredient proportions"> -->
-      <h2><a href="https://kl946-food-chart.hf.space/app/">Food Chart</a></h2>
-      <p>Turns a recipe into a pie chart of what it's actually made of.</p>
-      <div class="foot">
-        <span class="tech">pytorch · flask · react native</span>
-        <a href="https://github.com/kml-coder/food_chart_public">code</a>
+    <article class="card" role="button" tabindex="0" aria-expanded="false">
+      <div class="face face-front">
+        <!-- <img src="assets/food-chart.png" alt="Pie chart of a recipe's ingredient proportions"> -->
+        <h2><a href="https://kl946-food-chart.hf.space/app/">Food Chart</a></h2>
+        <p>Turns a recipe into a pie chart of what it's actually made of.</p>
+        <div class="foot">
+          <span class="tech">pytorch · flask · react native</span>
+          <a href="https://github.com/kml-coder/food_chart_public">code</a>
+        </div>
+      </div>
+      <div class="face face-back" aria-hidden="true">
+        <p>Recipes won't give you a common unit — “a pinch,” “a handful,” “3 large eggs.”
+           Asking a model cost three seconds per ingredient, for an output that is one number.</p>
+        <div class="foot">
+          <span class="tech"></span>
+          <span class="hint">← back</span>
+        </div>
       </div>
     </article>
 
   </div>
 
 </main>
+
+<script>
+  // 카드 아무 데나 클릭 = 뒤집기. 제품 사이트·code로 가는 건 링크 글자 위에서만.
+  document.querySelectorAll('.card').forEach(function (card) {
+    var front = card.querySelector('.face-front');
+    var back = card.querySelector('.face-back');
+
+    function toggle() {
+      var flipped = card.classList.toggle('is-flipped');
+      card.setAttribute('aria-expanded', flipped ? 'true' : 'false');
+      back.setAttribute('aria-hidden', flipped ? 'false' : 'true');
+      front.setAttribute('aria-hidden', flipped ? 'true' : 'false');
+      // 뒷면이 열려 있는 동안엔 앞면 링크로 탭 이동이 안 되게.
+      front.querySelectorAll('a').forEach(function (el) {
+        if (flipped) { el.setAttribute('tabindex', '-1'); }
+        else { el.removeAttribute('tabindex'); }
+      });
+    }
+
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('a')) return;
+      toggle();
+    });
+
+    card.addEventListener('keydown', function (e) {
+      if (e.target !== card) return;
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+</script>
 </body>
 </html>
